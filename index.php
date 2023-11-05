@@ -13,21 +13,24 @@
     <link rel="stylesheet" href="CSS/main.css">
 </head>
 <body>
-    <form class="searchform" action="search.php" method="post">
-        <label for="search">Search for user:</label>
-        <input  id="search" type="text" name="usersearch" placeholder="Search...">
-        <button>Search</button>
-
-    </form>
-    <h3>Sign up</h3>
-    <form action="includes/signup.inc.php" method="post">
-       <?php
-             signup_inputs();
-       ?>
-        <button>Signup</button>
-    </form>
-
-    <h3>Change account</h3>
+    <div class="title-signup">
+                    Sign up
+    </div>
+   <div class="container-signup">
+       
+        <div class="signup-contain">
+            <form action="includes/signup.inc.php" method="post">
+                <input class="usernameC" type="text" name="username" placeholder="Username">
+                <input class="passC" type="password" name="pwd" placeholder="Password">
+                <input class="emailC" type="text" name="email" placeholder="E-mail">
+                <button class="signC">Signup</button>
+            </form>
+        </div>
+   </div>
+    
+   
+    
+    <!--<h3>Change account</h3>
     <form action="includes/userupdate.inc.php" method="post">
         <input type="text" name="username" placeholder="Username">
         <input type="password" name="pwd" placeholder="Password">
@@ -42,7 +45,7 @@
         <input type="text" name="email" placeholder="E-mail">
         <button>Delete</button>
     </form>
-    
+    -->
     <?php
         cheack_signup_error();
     ?>
